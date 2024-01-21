@@ -1,0 +1,48 @@
+{
+  "name": "webpack-stream",
+  "version": "1.0.0",
+  "description": "Webpack base config",
+  "main": "index.js",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "webpack --mode=production --progress",
+    "start": "webpack serve --mode=development",
+    "deploy": "npm run build && gh-pages -d dist -e project-name",
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "lint-styles": "stylelint \"./src/**/*.scss\"",
+    "lint-styles:fix": "stylelint \"./src/**/*.scss\" --fix"
+  },
+  "keywords": [],
+  "author": "Sergey Koksharov <gentoosiastic@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.0.0",
+    "css-loader": "^6.9.1",
+    "esbuild-loader": "^4.0.2",
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "gh-pages": "^6.1.1",
+    "globals": "^13.24.0",
+    "html-webpack-plugin": "^5.6.0",
+    "mini-css-extract-plugin": "^2.7.7",
+    "prettier": "^3.2.4",
+    "sass": "^1.70.0",
+    "sass-loader": "^14.0.0",
+    "style-loader": "^3.3.4",
+    "stylelint": "^16.2.0",
+    "stylelint-config-clean-order": "^5.4.0",
+    "stylelint-config-css-modules": "^4.4.0",
+    "stylelint-config-standard-scss": "^13.0.0",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "modern-normalize": "^2.0.0"
+  }
+}
